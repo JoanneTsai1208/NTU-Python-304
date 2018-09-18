@@ -1,0 +1,13 @@
+#Homework1.1
+#input處理，將輸入的值對應到三個變數中(cookies, choco, cakes)
+cookies = int(input())
+choco = int(input())
+cake = int(input())
+#對尚未兌換贈品的數量進行計算: 10 coolies->1choco, 5choco->1cake利用商數
+if(cookies>=10):
+    choco = choco + cookies//10
+if(choco >= 5):
+    cake = cake + choco//5
+#format, 將三者欄位和值對齊
+print("{:^s}\t{:^s}\t{:^s}".format("Cookies","Chocos","Cakes"))
+print("{:<}\t{:<}\t{:<}".format(cookies,choco,cake))
